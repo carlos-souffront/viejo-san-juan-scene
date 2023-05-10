@@ -4,23 +4,108 @@
 </head>
 
 <style>
+  body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    background-image: linear-gradient(
+      to bottom, 
+      rgb(195, 238, 238) 0%, 
+      rgb(195, 238, 238) 50%, 
+      rgb(255, 255, 255) 50%, 
+      rgb(255, 255, 255) 100%);
+  }
+  
+  .barrio {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .casa-principal {
+    
+  }
+  
+  /*make sure to adjust door x-axis*/
+  .doorway {
+    position: absolute;
+    height: 130px;
+    width: 70px;
+    border: 1px solid, black;
+    z-index: 3;
+    border-top-left-radius: 100px 100px;
+    border-top-right-radius: 100px 100px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 50px auto;
+    background-color: black;
+    top: 280px;
+    left: 330px;
+  }
+  
+  .window {
+    position: absolute;
+    width: 36px;
+    height: 90px;
+    border: .5px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    z-index: 3;
+    top: 190px;
+    left: 210px;
+  }
+  
+  .window.flip-1 {
+    transform: scaleY(-1);
+    left: calc(25% - 18px);
+  }
+  
+  .window.flip-2 {
+    transform: scaleY(-1);
+    left: calc(50% - 18px);
+  }
+  
+  .window.flip-3 {
+    transform: scaleY(-1);
+    left: calc(75% - 18px);
+  }
+  
+  .window.flip-4 {
+    transform: scaleY(-1);
+    left: calc(100% - 18px);
+  }
 
+  
+  
 </style>
+
 <div class="escena">
-  <div class="casa-principal">
-    <div class="doorway"></div>
-    <div class="window"></div>
-    <div class="window-flip"></div>
-    <div class="pared"></div>
-    <div class="tree"></div>
+  <div class="barrio">
+    <div class="casa-principal">
+      <div class="doorway"></div>
+      <div class="window"></div>
+      <div class="window flip-1"></div>
+      <div class="window flip-2"></div>
+      <div class="window flip-3"></div>
+      <div class="window flip-4"></div>
+      <div class="pared"></div>
+      <div class="tree">
+        <div class="trunk"></div>
+        <div class="branch-1"></div>
+        <div class="branch-2"></div>
+        <div class="branch-3"></div>
+      </div>
   </div>
-  <div class="casa-izquierda">
-    <div class="window-2"></div>
-    <div class="side-wall-1"></div>
+    <div class="casa-izquierda">
+      <div class="window-2"></div>
+      <div class="side-wall-1"></div>
+    </div>
+    <div class="casa-derecha">
+      <div class="window-3"></div>
+      <div class="window-3 flip"></div>
+      <div class="side-wall-2"></div>
+    </div>
   </div>
-  <div class="casa-derecha">
-    <div class="window-3"></div>
-    <div class="window-3-flip"></div>
-  </div>
+  <div class="calle"></div>
 </div>
 
