@@ -29,8 +29,8 @@
   /*make sure to adjust door x-axis*/
   .doorway {
     position: absolute;
-    height: 130px;
-    width: 70px;
+    height: 150px;
+    width: 80px;
     border: 1px solid, black;
     z-index: 3;
     border-top-left-radius: 100px 100px;
@@ -39,40 +39,53 @@
     border-bottom-right-radius: 0;
     margin: 50px auto;
     background-color: black;
-    top: 280px;
-    left: 330px;
+    top: 377px;
+    left: 357.5px;
   }
   
   .window {
     position: absolute;
-    width: 36px;
-    height: 90px;
-    border: .5px solid black;
+    width: 46px;
+    height: 220px;
+    border: 6px solid rgb(255, 250, 240);
     border-radius: 4px;
     box-sizing: border-box;
     z-index: 3;
-    top: 190px;
-    left: 210px;
+    top: 150px;
+    left: 227.5px;
   }
   
   .window.flip-1 {
     transform: scaleY(-1);
-    left: calc(25% - 18px);
+    left: 301px;
   }
   
   .window.flip-2 {
     transform: scaleY(-1);
-    left: calc(50% - 18px);
+    left: 374.5px;
   }
   
   .window.flip-3 {
     transform: scaleY(-1);
-    left: calc(75% - 18px);
+    left: 448px;
   }
   
   .window.flip-4 {
     transform: scaleY(-1);
-    left: calc(100% - 18px);
+    left: 521.5px;
+  }
+  
+  .pared {
+    position: absolute;
+    height: 495px;
+    width: 395px;
+    border: 1.3px solid black;
+    border-radius: 5px;
+    margin: 50px auto;
+    z-index: 2;
+    background-color: rgb(250, 235, 215);
+    left: 200px;
+    top: 30px;
   }
 
   
@@ -107,5 +120,6 @@
     </div>
   </div>
   <div class="calle"></div>
+  <div class="pintura"></div>
 </div>
 
