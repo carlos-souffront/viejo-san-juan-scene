@@ -15,6 +15,7 @@
       rgb(195, 238, 238) 50%, 
       rgb(255, 255, 255) 50%, 
       rgb(255, 255, 255) 100%);
+    z-index: -1;
   }
   
   .barrio {
@@ -79,13 +80,77 @@
     position: absolute;
     height: 495px;
     width: 395px;
-    border: 1.3px solid black;
+    border: 1.3px solid rgb(250, 235, 215);
     border-radius: 5px;
     margin: 50px auto;
     z-index: 2;
     background-color: rgb(250, 235, 215);
     left: 200px;
     top: 30px;
+    clip-path: ;
+  }
+  
+  .wall-crown {
+    position: absolute;
+    width: 395px;
+    height: 8px;
+    background-color: #f5deb3;
+    top: 0px;
+    border-top: 8px solid #f5deb3;
+    border-bottom: 8px solid #f5deb3;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-image: linear-gradient(90deg, 
+    rgb(245, 222, 179, 0.8), 
+    rgb(245, 222, 179, 0.8) 10%, 
+    rgb(245, 222, 179, 0.5) 10%, 
+    rgb(245, 222, 179, 0.5) 20%, 
+    rgb(245, 222, 179, 0.8) 20%, 
+    rgb(245, 222, 179, 0.8) 30%, 
+    rgb(245, 222, 179, 0.5) 30%, 
+    rgb(245, 222, 179, 0.5) 40%, 
+    rgb(245, 222, 179, 0.8) 40%, 
+    rgb(245, 222, 179, 0.8) 50%, 
+    rgb(245, 222, 179, 0.5) 50%, 
+    rgb(245, 222, 179, 0.5) 60%, 
+    rgb(245, 222, 179, 0.8) 60%, 
+    rgb(245, 222, 179, 0.8) 70%, 
+    rgb(245, 222, 179, 0.5) 70%, 
+    rgb(245, 222, 179, 0.5) 80%, 
+    rgb(245, 222, 179, 0.8) 80%, 
+    rgb(245, 222, 179, 0.8) 90%, 
+    rgb(245, 222, 179, 0.5) 90%, 
+    rgb(245, 222, 179, 0.5) 100%);
+  }
+  
+  .tree {
+    position: absolute;
+    z-index: ;
+  }
+  
+  .trunk {
+    position: relative;
+    height: 390px;
+    width: 17px;
+    border-radius: 5px;
+    left: ;
+    top: ;
+    opacity: .88;
+    background-image: repeating-linear-gradient(
+      #deb887, #8b4513, #cd853f);
+    
+  }
+  
+  .branch-1 {
+    position: relative;
+  }
+  
+  .branch-2 {
+    position: relative;
+  }
+  
+  .branch-3 {
+    position: relative;
   }
 
   
@@ -96,12 +161,24 @@
   <div class="barrio">
     <div class="casa-principal">
       <div class="doorway"></div>
-      <div class="window"></div>
-      <div class="window flip-1"></div>
-      <div class="window flip-2"></div>
-      <div class="window flip-3"></div>
-      <div class="window flip-4"></div>
-      <div class="pared"></div>
+      <div class="window">
+        <div class="window-crown"></div>
+      </div>
+      <div class="window flip-1">
+        <div class="window-crown refl-1"></div>
+      </div>
+      <div class="window flip-2">
+        <div class="window-crown refl-2"></div>
+      </div>
+      <div class="window flip-3">
+        <div class="window-crown refl-3"></div>
+      </div>
+      <div class="window flip-4">
+        <div class="window-crown refl-4"></div>
+      </div>
+      <div class="pared">
+        <div class="wall-crown"></div>
+      </div>
       <div class="tree">
         <div class="trunk"></div>
         <div class="branch-1"></div>
