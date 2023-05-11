@@ -9,11 +9,11 @@
     margin: 0;
     padding: 0;
     background-color: #fff;
-    background-image: linear-gradient(to bottom,
+    background-image: linear-gradient(to bottom right,
         rgb(255, 160, 122) 0%,
         rgb(255, 228, 181) 50%,
-        rgb(255, 255, 255) 50%,
-        rgb(255, 255, 255) 100%);
+        rgb(255, 228, 181) 50%,
+        rgb(255, 160, 122) 100%);
     z-index: -1;
   }
 
@@ -142,13 +142,16 @@
     width: 5px;
     border-radius: 2px;
     background-color: #8b4513;
+    /*make sure to fix to blend branch and trunk*/
+    box-shadow: 0 0 10px 5px #deb887;
   }
 
   .branch.b1 {
     transform: rotate(10deg);
     left: 60px;
     bottom: 200px;
-    box-shadow: -60px 130px #8b4513;
+    box-shadow: -30px -130px #8b4513, 
+      ;
   }
 
   .branch.b2 {
