@@ -4,29 +4,26 @@
 </head>
 
 <style>
-  body{
+  body {
     height: 100%;
     margin: 0;
     padding: 0;
     background-color: #fff;
-    background-image: linear-gradient(
-      to bottom, 
-      rgb(195, 238, 238) 0%, 
-      rgb(195, 238, 238) 50%, 
-      rgb(255, 255, 255) 50%, 
-      rgb(255, 255, 255) 100%);
+    background-image: linear-gradient(to bottom,
+        rgb(255, 160, 122) 0%,
+        rgb(255, 228, 181) 50%,
+        rgb(255, 255, 255) 50%,
+        rgb(255, 255, 255) 100%);
     z-index: -1;
   }
-  
+
   .barrio {
     margin: 0;
     padding: 0;
   }
-  
-  .casa-principal {
-    
-  }
-  
+
+  .casa-principal {}
+
   /*make sure to adjust door x-axis*/
   .doorway {
     position: absolute;
@@ -43,7 +40,7 @@
     top: 377px;
     left: 357.5px;
   }
-  
+
   .window {
     position: absolute;
     width: 46px;
@@ -55,27 +52,27 @@
     top: 150px;
     left: 227.5px;
   }
-  
+
   .window.flip-1 {
     transform: scaleY(-1);
     left: 301px;
   }
-  
+
   .window.flip-2 {
     transform: scaleY(-1);
     left: 374.5px;
   }
-  
+
   .window.flip-3 {
     transform: scaleY(-1);
     left: 448px;
   }
-  
+
   .window.flip-4 {
     transform: scaleY(-1);
     left: 521.5px;
   }
-  
+
   .pared {
     position: absolute;
     height: 495px;
@@ -89,7 +86,7 @@
     top: 30px;
     clip-path: ;
   }
-  
+
   .wall-crown {
     position: absolute;
     width: 395px;
@@ -100,59 +97,68 @@
     border-bottom: 8px solid #f5deb3;
     border-left: 0px solid transparent;
     border-right: 0px solid transparent;
-    border-image: linear-gradient(90deg, 
-    rgb(245, 222, 179, 0.8), 
-    rgb(245, 222, 179, 0.8) 10%, 
-    rgb(245, 222, 179, 0.5) 10%, 
-    rgb(245, 222, 179, 0.5) 20%, 
-    rgb(245, 222, 179, 0.8) 20%, 
-    rgb(245, 222, 179, 0.8) 30%, 
-    rgb(245, 222, 179, 0.5) 30%, 
-    rgb(245, 222, 179, 0.5) 40%, 
-    rgb(245, 222, 179, 0.8) 40%, 
-    rgb(245, 222, 179, 0.8) 50%, 
-    rgb(245, 222, 179, 0.5) 50%, 
-    rgb(245, 222, 179, 0.5) 60%, 
-    rgb(245, 222, 179, 0.8) 60%, 
-    rgb(245, 222, 179, 0.8) 70%, 
-    rgb(245, 222, 179, 0.5) 70%, 
-    rgb(245, 222, 179, 0.5) 80%, 
-    rgb(245, 222, 179, 0.8) 80%, 
-    rgb(245, 222, 179, 0.8) 90%, 
-    rgb(245, 222, 179, 0.5) 90%, 
-    rgb(245, 222, 179, 0.5) 100%);
-  }
-  
-  .tree {
-    position: absolute;
-    z-index: ;
-  }
-  
-  .trunk {
-    position: relative;
-    height: 390px;
-    width: 17px;
-    border-radius: 5px;
-    left: ;
-    top: ;
-    opacity: .88;
-    background-image: repeating-linear-gradient(
-      #deb887, #8b4513, #cd853f);
-    
-  }
-  
-  .branch-1 {
-    position: relative;
-  }
-  
-  .branch-2 {
-    position: relative;
-  }
-  
-  .branch-3 {
-    position: relative;
+    border-image: linear-gradient(90deg,
+        rgb(245, 222, 179, 0.8),
+        rgb(245, 222, 179, 0.8) 10%,
+        rgb(245, 222, 179, 0.5) 10%,
+        rgb(245, 222, 179, 0.5) 20%,
+        rgb(245, 222, 179, 0.8) 20%,
+        rgb(245, 222, 179, 0.8) 30%,
+        rgb(245, 222, 179, 0.5) 30%,
+        rgb(245, 222, 179, 0.5) 40%,
+        rgb(245, 222, 179, 0.8) 40%,
+        rgb(245, 222, 179, 0.8) 50%,
+        rgb(245, 222, 179, 0.5) 50%,
+        rgb(245, 222, 179, 0.5) 60%,
+        rgb(245, 222, 179, 0.8) 60%,
+        rgb(245, 222, 179, 0.8) 70%,
+        rgb(245, 222, 179, 0.5) 70%,
+        rgb(245, 222, 179, 0.5) 80%,
+        rgb(245, 222, 179, 0.8) 80%,
+        rgb(245, 222, 179, 0.8) 90%,
+        rgb(245, 222, 179, 0.5) 90%,
+        rgb(245, 222, 179, 0.5) 100%);
   }
 
+  .tree {
+    position: absolute;
+    top: 165px;
+    left: 50px;
+    z-index: 1;
+  }
+
+  .trunk {
+    position: relative;
+    height: 410px;
+    width: 35px;
+    border-radius: 10px;
+    opacity: .85;
+    background-image: repeating-linear-gradient(#deb887, #8b4513, #cd853f);
+  }
+
+  .branch {
+    position: absolute;
+    height: 340px;
+    width: 5px;
+    border-radius: 2px;
+    background-color: #8b4513;
+  }
+
+  .branch.b1 {
+    transform: rotate(10deg);
+    left: 60px;
+    bottom: 200px;
+    box-shadow: -60px 130px #8b4513;
+  }
+
+  .branch.b2 {
+    transform: rotate(-30deg);
+    left: ;
+    bottom: ;
+
+  }
+
+  .leaf {}
   
   
 </style>
@@ -181,22 +187,25 @@
       </div>
       <div class="tree">
         <div class="trunk"></div>
-        <div class="branch-1"></div>
-        <div class="branch-2"></div>
-        <div class="branch-3"></div>
+        <div class="branch b1">
+          <div class="leaf 1"></div>
+          <div class="leaf 2"></div>
+        </div>
+        <div class="branch b2">
+          <div class="leaf 4"></div>
+          <div class="leaf 5"></div>
+        </div>
       </div>
-  </div>
-    <div class="casa-izquierda">
-      <div class="window-2"></div>
-      <div class="side-wall-1"></div>
-    </div>
-    <div class="casa-derecha">
-      <div class="window-3"></div>
-      <div class="window-3 flip"></div>
-      <div class="side-wall-2"></div>
     </div>
   </div>
-  <div class="calle"></div>
-  <div class="pintura"></div>
+  <div class="casa-izquierda">
+    <div class="window-2"></div>
+    <div class="side-wall-1"></div>
+  </div>
+  <div class="casa-derecha">
+    <div class="window-3"></div>
+    <div class="window-3 flip"></div>
+    <div class="side-wall-2"></div>
+  </div>
 </div>
-
+<div class="calle"></div>
