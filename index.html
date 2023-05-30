@@ -24,7 +24,6 @@
 
   .casa-principal {}
 
-  /*make sure to adjust door x-axis*/
   .doorway {
     position: absolute;
     height: 150px;
@@ -51,6 +50,7 @@
     z-index: 3;
     top: 150px;
     left: 227.5px;
+    background-color: transparent;
   }
 
   .window.flip-1 {
@@ -84,7 +84,38 @@
     background-color: rgb(250, 235, 215);
     left: 200px;
     top: 30px;
-    clip-path: ;
+    /*fix clip path*/
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      /*first window*/
+      227.5px 150px,
+      227.5px 370px,
+      273.5px 370px,
+      273.5px 150px,
+      /*second*/
+      301px 150px,
+      301px 370px,
+      347px 370px,
+      347px 150px, 
+      /*third window*/
+      374.5px 150px,
+      374.5px 370px,
+      420.5px 370px,
+      420.5px 150px,
+      /*fourth*/
+      448px 150px,
+      448px 370px,
+      494px 370px,
+      494px 150px, 
+      /*5th*/
+      521.5px 150px,
+      521.5px 370px,
+      567.5px 370px,
+      567.5px 150px
+  );
   }
 
   .wall-crown {
@@ -133,25 +164,28 @@
     width: 35px;
     border-radius: 10px;
     opacity: .85;
-    background-image: repeating-linear-gradient(#deb887, #8b4513, #cd853f);
+    background-image: repeating-linear-gradient(#deb887,
+        #8b4513,
+        #cd853f);
   }
 
   .branch {
     position: absolute;
-    height: 340px;
-    width: 5px;
-    border-radius: 2px;
+    height: 320px;
+    width: 6px;
+    border-radius: 50% / 10%;
     background-color: #8b4513;
     /*make sure to fix to blend branch and trunk*/
-    box-shadow: 0 0 10px 5px #deb887;
+    box-shadow: 0 0 5px 2px rgba(222, 184, 135, 0.7);
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
   }
 
   .branch.b1 {
     transform: rotate(10deg);
     left: 60px;
     bottom: 200px;
-    box-shadow: -30px -130px #8b4513, 
-      ;
+    box-shadow: -30px -130px #8b4513,
+    ;
   }
 
   .branch.b2 {
@@ -162,8 +196,6 @@
   }
 
   .leaf {}
-  
-  
 </style>
 
 <div class="escena">
