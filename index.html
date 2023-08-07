@@ -22,7 +22,12 @@
     padding: 0;
   }
 
-  .casa-principal {}
+  .casa-principal {
+    position: absolute;
+    margin: auto;
+    left: -18px;
+    top: 1px;
+  }
 
   .doorway {
     position: absolute;
@@ -35,9 +40,17 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     margin: 50px auto;
-    background-color: black;
     top: 377px;
-    left: 357.5px;
+    left: 360px;
+    overflow: hidden;
+  }
+  
+  .bandera {
+    width: 100%;
+    height: 100%;
+    background-image: url(PR protest flag.jpg);
+    background-size: cover;
+    background-position: center;
   }
 
   .window {
@@ -84,38 +97,6 @@
     background-color: rgb(250, 235, 215);
     left: 200px;
     top: 30px;
-    /*fix clip path*/
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 100%,
-      0 100%,
-      /*first window*/
-      227.5px 150px,
-      227.5px 370px,
-      273.5px 370px,
-      273.5px 150px,
-      /*second*/
-      301px 150px,
-      301px 370px,
-      347px 370px,
-      347px 150px, 
-      /*third window*/
-      374.5px 150px,
-      374.5px 370px,
-      420.5px 370px,
-      420.5px 150px,
-      /*fourth*/
-      448px 150px,
-      448px 370px,
-      494px 370px,
-      494px 150px, 
-      /*5th*/
-      521.5px 150px,
-      521.5px 370px,
-      567.5px 370px,
-      567.5px 150px
-  );
   }
 
   .wall-crown {
@@ -196,12 +177,82 @@
   }
 
   .leaf {}
+  
+  .casa-izquierda {
+    position: absolute;
+    margin: auto;
+    left: -45px;
+    top: 30px;
+    z-index: 2;
+  }
+  
+  .side-wall-1 {
+    position: absolute;
+    height: 485px;
+    width: 215px;
+    border: 6px solid rgb(244, 236, 247);
+    margin: 50px auto;
+    background-color: rgb(210, 180, 222);
+  }
+  
+  .window-2 {
+    position: absolute;
+    width: 46px;
+    height: 120px;
+    border: 2.5px solid rgb(244, 236, 247);
+    box-sizing: border-box;
+    top: 120px;
+    left: 30px;
+    z-index: 3;
+    background-color: #273746;
+  }
+  
+  .window-2.flip{
+    transform: scaleY(-1);
+    left: 150px;
+  }
+  
+  .doorway-2 {
+    position: absolute;
+    height: 150px;
+    width: 80px;
+    border: 1px solid rgb(244, 236, 247);
+    z-index: 3;
+    margin: 50px auto;
+    background-color: #273746;
+    top: 345.5px;
+    left: 76px;
+  }
+  
+  .casa-derecha {
+    position: absolute;
+    margin: auto;
+    /*
+    left: 579px;
+    top: 30px;
+    */
+    top: 250px;
+    left: 500px
+  }
+  
+  .side-wall-2 {
+    position: absolute;
+    height: 485px;
+    width: 500px;
+    border: 6px solid rgb(244, 236, 247);
+    margin: 50px auto;
+    background-color: #AED6F1;
+    z-index: 2;
+  }
+  
 </style>
 
 <div class="escena">
   <div class="barrio">
     <div class="casa-principal">
-      <div class="doorway"></div>
+      <div class="doorway">
+        <div class="bandera"></div>
+      </div>
       <div class="window">
         <div class="window-crown"></div>
       </div>
@@ -235,7 +286,9 @@
   </div>
   <div class="casa-izquierda">
     <div class="window-2"></div>
+    <div class="window-2 flip"></div>
     <div class="side-wall-1"></div>
+    <div class="doorway-2"></div>
   </div>
   <div class="casa-derecha">
     <div class="window-3"></div>
